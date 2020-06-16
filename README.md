@@ -7,12 +7,12 @@ maven执行：mvn test.
 执行报告查看
 testng.xml执行可视化报告：${workspace}/test-output/report.html
 maven执行报告：${workspace}/target/test-output/report.html
-api-config.xml配置
-api请求根路径、请求头及初始化参数值可以在api-config上进行配置。
+api-config.xml配置:
+	api请求根路径、请求头及初始化参数值可以在api-config上进行配置。
 
 rootUrl: 必须的配置，api的根路径，在调用api时用于拼接，配置后，会在自动添加到用例中的url的前缀中。
 headers: 非必须配置，配置后在调用api时会将对应的name:value值设置到所有请求的请求头中header-name:header-value。
-			ps:后期因为token在headers中，所以增加了动态获取token的方法
+	ps:后期因为token在headers中，所以增加了动态获取token的方法,因为事件仓促，获取token并没有单独写成工具类，后期会维护
 params： 非必须配置，公共参数，通常放置初始化配置数据，所有用例执行前，会将params下所有的param配置进行读取并存储到公共参数池中，在用例执行时，使用特定的关键字(${param_name})可以获取。具体使用请参考下面的高级用法。
 project_name: 项目名称，会在html报告中使用
 <root>
@@ -35,7 +35,7 @@ run： 标记为‘1’时，该行数据会被读取执行。标记为‘0’�
 description： 该用例描述，在报告中体现。
 
 method： 该api测试用例的请求方法（暂只支持get,post）。上传文件时请填写为upload
-			ps:现已将上传文件封装至post请求中
+	ps:现已将上传文件封装至post请求中，并添加了put，delete的支持
 
 url： 该api测试用例的请求路径。
 

@@ -1,0 +1,32 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="通用平台自动化测试" verbose="1" preserve-order="true" parallel="false">
+	<test name="用户_用户">
+		<classes>
+			<class name="akytest.com.aokayun.api.ApiTest">
+				<methods>							
+					<include name="apiTest"></include>
+				</methods>
+			</class>	
+		</classes>
+	</test>
+	<test name="用户_角色">
+		<classes>
+			<class name="akytest.com.aokayun.api.UserApiTest">
+				<methods>
+					<include name="apiTest"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<listeners>	
+		<listener class-name="com.aokayun.api.listeners.AutoTestListener"></listener>
+		<listener class-name="com.aokayun.api.listeners.RetryListener"></listener>
+		<!-- ReportNg 报告  -->
+		<!--
+		<listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener>
+		-->
+		<!-- ExtentReport 报告  -->
+		<listener class-name="com.aokayun.api.listeners.ExtentTestNGIReporterListener"></listener>
+	</listeners>
+</suite>

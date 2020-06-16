@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <rootUrl>http://192.168.101.89:30080</rootUrl>
+    <headers>
+        <!-- 配置为自己的参数 -->
+        <header name="appId" value="13500000001"></header>
+        <header name="appKey" value="e10adc3949ba59abbe56e057f20f883e"/>
+    </headers>
+    <params>
+        <!-- 公共参数根据自己的情况配置 -->
+    	<param name="" value=""></param>
+    </params>
+    <project_name>通用平台接口测试报告</project_name>
+</root>

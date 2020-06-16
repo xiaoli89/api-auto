@@ -16,10 +16,9 @@ headers: 非必须配置，配置后在调用api时会将对应的name:value值�
 params： 非必须配置，公共参数，通常放置初始化配置数据，所有用例执行前，会将params下所有的param配置进行读取并存储到公共参数池中，在用例执行时，使用特定的关键字(${param_name})可以获取。具体使用请参考下面的高级用法。
 project_name: 项目名称，会在html报告中使用
 <root>
-	<rootUrl></rootUrl>
+	<rootUrl>http://172.18.3.113:8003</rootUrl>
 	<headers>
 		<!-- 换成自己实际的值 -->
-		<header name="apikey" value="123456"></header>
 		<header name="apikey" value="123456"></header>
 	</headers>
 	<params>
@@ -31,7 +30,7 @@ project_name: 项目名称，会在html报告中使用
 </root>
 api请求用例具体数据。除表头外，一行代表一个api用例。执行时会依次从左到右，从上到下执行。
 
-run： 标记为‘Y’时，该行数据会被读取执行。非‘Y’标记时，该行数据不会被读取执行
+run： 标记为‘1’时，该行数据会被读取执行。标记为‘0’时，该行数据不会被读取执行
 
 description： 该用例描述，在报告中体现。
 
